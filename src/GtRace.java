@@ -6,19 +6,16 @@ public class GtRace {
             new GtCar("Alpine", "A310", 5, "🚙"),
             new GtCar("Bugatti", "Chiron", 7, "🚗"),
             new GtCar("Renault", "Spider", 6, "🚕"),
-//            new GtCar("Alpine", "A310", 5, "🚙"),
-//            new GtCar("Bugatti", "Chiron", 7, "🚗"),
-//            new GtCar("Renault", "Spider", 6, "🚕"),
     };
 
     public GtRace(){
-//        raceDistance = 100;
+        raceDistance = 100;
     }
 
     public static void main(String[] args) {
-//        while(!carWinsRace()) {
-//            run();
-//        }
+        while(!carWinsRace()) {
+            run();
+        }
 
         for (GtCar car : ranking) {
             System.out.println(car.toString());
@@ -38,24 +35,22 @@ public class GtRace {
         for (GtCar car : ranking) {
             System.out.print(String.format("Driving the %s %s %s. ", car.photo, car.make, car.model));
             car.drive(getUserInput());
-//            System.out.println(car.toString());
+            System.out.println(car.toString());
         }
     }
 
     public static void run() {
         driveCars();
         drawRanking();
-
-
-
-
-//        for (GtCar car : ranking) {
-//            System.out.println(car.toString());
-//        }
     }
 
     public static void drawRanking() {
-        System.out.println("lol");
+
+        System.out.println("------TURN RESULTS-------");
+        for (GtCar car : ranking) {
+            System.out.println(car.make + "\t travelled " + car.distTravelled + " Km. " + (raceDistance - car.distTravelled) + " Km to go." );
+        }
+        System.out.println("--------------------");
     }
 
     public static int getUserInput() {

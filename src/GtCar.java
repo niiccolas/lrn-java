@@ -15,9 +15,6 @@ public class GtCar {
         this.distTravelled = 0;
     }
 
-//    public void info() {
-//        System.out.println("Model is " + this.model);
-//    }
     public void drive(int nGear) {
         this.distTravelled += nGear * this.speed;
         this.gasoline -= this.distTravelled / 4;
